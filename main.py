@@ -2,11 +2,9 @@ import time
 import csv
 from web3 import Web3
 
-scroll = {"rpc": "https://scroll.blockpi.network/v1/rpc/public",
-          "scan": "https://scrollscan.com/tx",
-          "token": "ETH", "chain_id": 534352}
+chain = {"rpc": "https://scroll.blockpi.network/v1/rpc/public",}
 
-w3 = Web3(Web3.HTTPProvider(scroll['rpc']))
+w3 = Web3(Web3.HTTPProvider(chain['rpc']))
 
 with open("wallets.txt", "r") as file:
     key = [row.strip() for row in file]
